@@ -6,9 +6,9 @@ def get_days_from_today(date):
         current_datetime = datetime.today()
         another_datetime = datetime.strptime(date, "%Y-%m-%d")
         total_days = current_datetime.toordinal() - another_datetime.toordinal()
-        print(total_days)
+        return total_days
     except ValueError:
-        print("Неправильний формат дати. Використовуйте формат 'YYYY-MM-DD'.")
+        return "Неправильний формат дати. Використовуйте формат 'YYYY-MM-DD'."
 
 
-get_days_from_today('2000-10-09')
+print(get_days_from_today('220-10-09'))
