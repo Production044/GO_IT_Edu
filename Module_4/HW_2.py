@@ -5,7 +5,7 @@ def get_cats_info(path):
         with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 cat_id, cat_name, cat_age = line.strip().split(',')
-                cats_list.append({'id: ': cat_id, 'name: ': cat_name, 'age: ': cat_age})
+                cats_list.append({'id:': cat_id, 'name:': cat_name, 'age:': cat_age})
 
     except FileNotFoundError:
         print(f"Файл '{path}' не знайдено.")

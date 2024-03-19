@@ -20,14 +20,16 @@ def change_contact(args, contacts):
     else:
         return "Contact not found."
 
-def show_contact(args, contacts):
+
+def show_phone(args, contacts):
     if len(args) != 1:
-        raise ValueError("Invalid number of arguments for 'show' command.")
+        raise ValueError("Invalid number of arguments for 'phone' command.")
     name, *_ = args
     if name in contacts:
         return contacts[name]
     else:
         return "Contact not found."
+
 
 def show_all(contacts):
     if contacts:
@@ -61,9 +63,9 @@ def main():
             except ValueError as e:
                 print(e)
 
-        elif command == "show":
+        elif command == "phone":
             try:
-                print(show_contact(args, contacts))
+                print(show_phone(args, contacts))
             except ValueError as e:
                 print(e)
 
@@ -72,6 +74,7 @@ def main():
 
         else:
             print("Invalid command.")
+
 
 if __name__ == "__main__":
     main()
